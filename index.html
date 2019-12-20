@@ -8,19 +8,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
   <script>
     var wheel = $("#wheel");
-var boxes = $(".box");
+    var boxes = $(".box");
 
-var center = 500;
-var radius = 420;
-var total  = boxes.length;
-var slice  = 2 * Math.PI / total;
+    var center = 500;
+    var radius = 420;
+    var total  = boxes.length;
+    var slice  = 2 * Math.PI / total;
 
-boxes.each(function(i, box) {
+    boxes.each(function(i, box) {
   
-  var angle = i * slice;
+    var angle = i * slice;
   
-  var x = center + radius * Math.sin(angle);
-  var y = center - radius * Math.cos(angle);
+    var x = center + radius * Math.sin(angle);
+    var y = center - radius * Math.cos(angle);
     
   TweenLite.set(box, {
     rotation: angle + "_rad",
