@@ -1,0 +1,56 @@
+<html>
+<head>
+  
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<body>
+
+  <div id="wheel">
+    <img id="wheel-image" 
+         src="BaseMelHarmMinor-1000.png" alt="" />
+  </div>
+
+  <div id="base">
+    <img id="base-image" 
+         src="DiscMelHarmMinor-1000.png" alt="" />
+  </div>
+
+  <script>
+    var wheel = $("#wheel");
+    var boxes = $(".box");
+
+    var center = 500;
+    var radius = 420;
+    var total  = boxes.length;
+    var slice  = 2 * Math.PI / total;
+
+    boxes.each(function(i, box) {
+  
+    var angle = i * slice;
+  
+    var x = center + radius * Math.sin(angle);
+    var y = center - radius * Math.cos(angle);
+    
+  TweenLite.set(box, {
+      rotation: angle + "_rad",
+      xPercent: -50,
+      yPercent: -50,
+      x: x,
+      y: y
+      });  
+    });
+
+  Draggable.create(wheel, {
+    type: "rotation",
+    dragClickables: true
+  });
+
+  </script>
+  
+</body>
+</html>
