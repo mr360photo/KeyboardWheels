@@ -35,3 +35,34 @@ body {
   height: 1000px;
 }
 
+#link2minor {
+  position: absolute;
+  top: 400px;
+  left: 390px;
+  z-index: 2;
+  width: 220px;
+  height: 102px;
+  
+}
+
+#link2minor-image {
+  width: 220px;
+  height: 102px;
+  
+}
+
+#link2Major {
+  position: absolute;
+  top: 550px;
+  left: 390px;
+  z-index: 2;
+  width: 220px;
+  height: 102px;
+  
+}
+
+#link2Major-image {
+  width: 220px;
+  height: 102px;
+  
+}
