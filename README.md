@@ -1,2 +1,2 @@
 # mr360photo
-Keyboard Wheel App based on NewJazz Data
+Modes Wheel App based on NewJazz Data
